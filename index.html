@@ -6,20 +6,23 @@
           <span class="main-heading-secondary">Journal!</span>
         </h1>
 </div>
+<div class = "body">
 
 <div id = "date-time"> </div>
-<form action="">
-    <input type="text" name="name" placeholder="Enter Name"> 
-    <input type="text" name="journal" placeholder="Enter Journal"> 
-    <select id="select" >
-            <option value="happy">happy</option>
-            <option value="sad">sad</option>
-            <option value="bored">bored</option>
-            <option value="excited">excited</option>
-          </select>
-    <input type="button" value="Submit">
 
-</form>
+<input type="text" id="name" placeholder="Enter Name"> 
+<textarea id="message" placeholder="Enter Journal"></textarea>
+<!-- <input type="text" name="journal" >  -->
+<select id="select" >
+        <option value="happy">happy</option>
+        <option value="sad">sad</option>
+        <option value="bored">bored</option>
+        <option value="excited">excited</option>
+      </select>
+<button id ="save-button"> Submit </button>
 
+<ul class = "msg-list" id = "mylist">
+</ul>
+</body>
 <script src="scripts.js"></script>
 

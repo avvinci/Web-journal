@@ -28,6 +28,7 @@ function getJoke(){
 flag  = 0 ; 
 function displayJoke(joke){
     let jdiv = document.getElementById('joke-id') ; 
+    jdiv.classList.add('joke-display');
     let newelem = document.createElement('label') ; 
     let title = '' ; 
     if(flag === 0  ) {

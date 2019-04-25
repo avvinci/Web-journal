@@ -1,9 +1,9 @@
 <head>
-
     <meta charset='utf-8'>
 </head>
 
 <link rel = "stylesheet" type = "text/css" href = "styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:400,700" />
 
 <div class="main">
         <h1 class="main-heading">
@@ -11,27 +11,41 @@
           <span class="main-heading-secondary">Journal!</span>
         </h1>
 </div>
-<div class = "body">
 
-<div id = "date-time"> </div>
+<div class = "content">
 
-<input type="text" id="name" placeholder="Enter Name"> 
-<input type ="text" id="message" placeholder="Enter Journal">
+  <div id = "date-time"> 
+  </div>
 
-<!-- <div class="box"> -->
-  <select id="select" >
-      <option value="" hidden >Feeling? </option>
-          <option value="happy"> Happy </option>
-          <option value="sad">Sad </option>
-          <option value="bored"> Bored</option>
-          <option value="excited"> Excited</option>
-        </select>
-  <!-- </div> -->
+  <input type="text" id="name" placeholder="Enter Name"> 
+  <input type ="text" id="message" placeholder="Enter Journal">
 
-  <button id ="save-button"> Submit </button>
-<div id ="joke-id">  </div>
-<ul class = "msg-list" id = "mylist">
-</ul>
-</body>
+  <!-- <div class="box"> -->
+    <select id="select" >
+        <option value="" hidden >Feeling? </option>
+            <option value="happy"> Happy </option>
+            <option value="sad">Sad </option>
+            <option value="bored"> Bored</option>
+            <option value="excited"> Excited</option>
+          </select>
+    <!-- </div> -->
+
+    <button id ="save-button"> Submit </button>
+
+</div>
+
+
+<div class = "dynamic-content">
+
+  <div id ="joke-id"> 
+     </div>
+  
+  <div class = "msg-list">
+    <ul id = "mylist"> </ul>
+  </div>
+
+</div>
+
+
 <script src="scripts.js"></script>
 

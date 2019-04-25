@@ -1,17 +1,48 @@
+html {
+  font-family: 'Nunito', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .main {
     position: absolute;
-      top: 7%;
+      top: 7%;  
       left: 50%;
       transform: translate(-50%, -50%);
   }
   
-  .body{
+  .content{
     position: relative;
-      top: 37%;
-      left: 10%;
-      margin: 25px;
+    top: 20%;
+    left: 10%;
+    margin: 20px;
+    color:#444444;
+    padding: 30px 30px 0px;
+  }
+
+  .dynamic-content{
+    position: relative;
+    top: 20%;
+    left: 10%;
+    margin: 30px;
+    padding: 30 px;
+    columns: #666666;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .joke-display{
+    padding: 20px 20px 20px;
+    border: 1px solid #ccc;
+
+
   }
   
+  /* #mylist:hover {
+    box-shadow: 2px 6px 30px rgba(0, 0, 0, 0.2);
+  } */
+
   .main-heading {
     color: #777;
     text-transform: uppercase;
@@ -26,11 +57,11 @@
   }
   
   .main-heading-secondary {
-    font-family: sans-serif;
     display: block;
     font-size: 1.5rem;
     letter-spacing: 21px;
-    color: blue;
+    /* color: blue; */
+    color:#167FF5; 
     animation: moveInRight 1s ease-out;
   }
   
@@ -66,7 +97,7 @@
     }
   }
 
-  input[type=text], #message {
+  input[type=text] {
     width: 20%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -76,22 +107,34 @@
     box-sizing: border-box;
   }
 
+  #message {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;  
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
     select {
-    width: 15%;
+    width: 12%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    color:#444444;
   }
 
  button {
     width: 10%;
     background-color: #4CAF50;
+    /* background-color: #16A4F5; */
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 12px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -99,4 +142,6 @@
   
   button:hover {
     background-color: #45a049;
+    /* background-color: #16A4F4; */
+
   }

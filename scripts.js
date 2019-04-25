@@ -17,20 +17,25 @@ function getJoke(){
     let joke = "" ; 
     request.onload = function (){
         var data  = JSON.parse(this.response);
-        console.log(data.value.joke) ; 
+        // console.log(data.value.joke) ; 
         joke =  data.value.joke;  
         displayJoke(joke); 
 
     }
-    // console.log( 'here -' + joke); 
     request.send() ; 
-    // return joke; 
 }
 
+flag  = 0 ; 
 function displayJoke(joke){
     let jdiv = document.getElementById('joke-id') ; 
     let newelem = document.createElement('label') ; 
-    newelem.innerHTML  = 'Hey why sad ?? <br><br> Read a joke 😃   <br>' + joke + '<br><br> '; 
+    let title = '' ; 
+    if(flag === 0  ) {
+        title = 'Hey why sad ??<br> Read a joke 😃 <br><br>' ; 
+        flag  = 1;
+    }
+
+    newelem.innerHTML  = title + joke + '<br><br> '; 
     jdiv.appendChild(newelem); 
 }
 
@@ -46,10 +51,9 @@ function emotionHandler(){
     else if(selElem.value == 'bored'){
         textval += "🙄     ";
     }
-    else{
+    else  if(selElem.value == 'sad'){
         textval += "😞     ";
         getJoke() ; 
-        // displayJoke(joke) ; 
     }
     return textval ; 
 }
@@ -69,9 +73,8 @@ function clearText(){
 }
 
 function saveJournal(){
-    console.log(nameElem.value);
     // if(nameElem.value === "" ) return ; 
     createList(nameElem.value ,msgElem.value) ; 
     clearText() ; 
-    console.log('saving') ; 
+    // console.log('saving') ; 
 }

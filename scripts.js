@@ -1,6 +1,3 @@
-let curDate = new Date();
-let curTime = curDate.toLocaleTimeString();
-document.getElementById("date-time").innerHTML = curTime;
 let sb = document.getElementById('save-button');
 let nameElem = document.getElementById('name');
 let msgElem = document.getElementById('message');
@@ -9,11 +6,10 @@ let selElem = document.getElementById('select');
 
 
 sb.onclick = saveJournal ; 
-// nameElem.onchange = 
 
 function getJoke(){
     var request = new XMLHttpRequest();
-    request.open('GET','http://api.icndb.com/jokes/random',true);
+    request.open('GET','https://api.icndb.com/jokes/random',true);
     let joke = "" ; 
     request.onload = function (){
         var data  = JSON.parse(this.response);
@@ -79,3 +75,13 @@ function saveJournal(){
     clearText() ; 
     // console.log('saving') ; 
 }
+
+function getTime() {
+    let curDate = new Date();
+    let curTime = curDate.toLocaleTimeString();
+    // let curDay = curDate.toLocaleDateString()
+    document.getElementById("date-time").innerHTML =  curTime;
+}
+
+getTime();
+window.setInterval(getTime, 1000);
